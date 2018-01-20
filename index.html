@@ -1,85 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS grids practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/style.css">
-    <title>CSS Grid Fundamentals!</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="item item1">1</div>
-      <div class="item item2">2</div>
-      <div class="item item3">3</div>
-      <div class="item item4">4</div>
-      <div class="item item5">5</div>
-      <div class="item item6">6</div>
-      <div class="item item7">7</div>
-      <div class="item item8">8</div>
-      <div class="item item9">9</div>
-      <div class="item item10">10</div>
-      <div class="item item11">11</div>
-      <div class="item item12">12</div>
-      <div class="item item13">13</div>
-      <div class="item item14">14</div>
-      <div class="item item15">15</div>
-      <div class="item item16">16</div>
-      <div class="item item17">17</div>
-      <div class="item item18">18</div>
-      <div class="item item19">19</div>
-      <div class="item item20">20</div>
-      <div class="item item21">21</div>
-      <div class="item item22">22</div>
-      <div class="item item23">23</div>
-      <div class="item item24">24</div>
-      <div class="item item25">25</div>
-      <div class="item item26">26</div>
-      <div class="item item27">27</div>
-      <div class="item item28">28</div>
-      <div class="item item29">29</div>
-      <div class="item item30">30</div>
-    </div>
-    <style>
-      body {
-        overflow-x: hidden;
-      }
+      <div class="item item1">
+        <div class="content content1">
+          <div class="img img1"></div>
+          <p class="parg1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item2">
+        <div class="content content2">
+          <div class="img img2"></div>
+          <p class="parg2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item3">
+        <div class="content content3">
+          <div class="img img3"></div>
+          <p class="parg3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item4">
+        <div class="content content4">
+          <div class="img img4"></div>
+          <p class="parg4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item5">
+        <div class="content content5">
+          <div class="img img5"></div>
+          <p class="parg5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item6">
+        <div class="content content6">
+          <div class="img img6"></div>
+          <p class="parg6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item7">
+        <div class="content content7">
+          <div class="img img7"></div>
+          <p class="parg7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item8">
+        <div class="content content8">
+          <div class="img img8"></div>
+          <p class="parg8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item9">
+        <div class="content content9">
+          <div class="img img9"></div>
+          <p class="parg9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
+      <div class="item item10">
+        <div class="content content10">
+          <div class="img img10"></div>
+          <p class="parg10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero officiis delectus adipisci reprehenderit, eveniet
+            nam nihil ut rem.</p>
+        </div>
+      </div>
 
+
+    </div>
+
+    <style>
       .container {
         display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: repeat(3, 1fr)
+      }
+
+      .content {
+        display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        justify-items: center;
       }
 
-      .item1 {
-        grid-column: 1 / -1;
+      .img {
+        width: 80px;
+        height: 80px;
+        background: black;
       }
 
-      .item2 {
-        grid-column: 5 / -1;
-      }
-
-      .item5 {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-
-      .item8 {
-        grid-row: span 2;
-      }
-
-      .item15 {
-        grid-column: 1 / -1;
-      }
-
-      .item18 {
-        grid-column: 4 / 9;
-      }
-
-      .item20 {
-        grid-row: 4 / 7;
+      p {
+        font-size: 12px;
       }
     </style>
   </body>
